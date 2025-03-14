@@ -1,4 +1,4 @@
-from min_heap import MinHeap
+from coursera.trees.min_heap import MinHeap
 class TopKHeap:
     
     # The constructor of the class to initialize an empty data structure

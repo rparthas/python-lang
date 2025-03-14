@@ -1,5 +1,5 @@
-from max_heap import MaxHeap
-from min_heap import MinHeap
+from coursera.trees.max_heap import MaxHeap
+from coursera.trees.min_heap import MinHeap
 
 
 class MedianMaintainingHeap:
