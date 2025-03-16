@@ -7,10 +7,7 @@ def find_all_nodes_in_cycle(g:UndirectedGraph): # g is an UndirectedGraph class
     print("dfs_tree_parents", dfs_tree_parents)
     print("dfs_back_edges", dfs_back_edges)
 
-    non_trivial_back_edges = [(i,j) for (i,j) in dfs_back_edges if dfs_tree_parents[i] != j]
-    print("non_trivial_back_edges", non_trivial_back_edges)
-
-    for (i, j) in non_trivial_back_edges:
+    for (i, j) in dfs_back_edges:
         set_of_nodes.add(i)
         set_of_nodes.add(j)
         set_of_nodes.add(dfs_tree_parents[i])
