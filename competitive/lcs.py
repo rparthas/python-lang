@@ -19,5 +19,31 @@ class Solution:
 
         return max_cnt
 
+    def lcs(self, nums: List[int]) -> int:
+        hm = {}
+        for num in nums:
+            hm[num] = False
+
+        max_len = 1
+
+        for num in nums:
+            curr_len = 1
+            if hm[num] == True:
+                continue
+
+            search = num +1
+            while search in hm and hm[search] == False:
+                curr_len+=1
+                search+=1
+
+            search = num -1
+            while search in hm and hm[search] == False:
+                curr_len+=1
+                search-=1
+
+            max_len = max(max_len,curr_len)
+
+        return max_len
 if __name__ == "__main__":
     print(Solution().longestConsecutive(nums = [0,3,2,5,4,6,1,1]))
+    print(Solution().lcs(nums = [0,3,2,5,4,6,1,1]))
