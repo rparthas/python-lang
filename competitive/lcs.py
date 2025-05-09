@@ -44,6 +44,7 @@ class Solution:
             max_len = max(max_len,curr_len)
 
         return max_len
+
 if __name__ == "__main__":
     print(Solution().longestConsecutive(nums = [0,3,2,5,4,6,1,1]))
     print(Solution().lcs(nums = [0,3,2,5,4,6,1,1]))
